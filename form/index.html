@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Survey Form</title>
+  </head>
+  <body class="">
+    <div
+      id="parentElement"
+      class="container mx-auto mt-10 p-6 bg-gray-100 rounded-lg max-w-md"
+    >
+      <h1 class="text-2xl font-semibold mb-4">Survey Form</h1>
+      <form id="surveyForm">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600"
+            >First Name</label
+          >
+          <input
+            type="text"
+            class="mt-1 p-2 w-full border rounded-md"
+            id="firstName"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600"
+            >Last Name</label
+          >
+          <input
+            type="text"
+            class="mt-1 p-2 w-full border rounded-md"
+            id="lastName"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600"
+            >Date of Birth</label
+          >
+          <input
+            type="date"
+            class="mt-1 p-2 w-full border rounded-md"
+            id="dob"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600">Country</label>
+          <select
+            class="mt-1 p-2 w-full border rounded-md"
+            id="country"
+            required
+          >
+            <option value="" disabled selected>Select Country</option>
+            <option value="usa">India</option>
+            <option value="canada">USA</option>
+            <option value="canada">Rusia</option>
+            <option value="canada">China</option>
+            <option value="canada">Nepal</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600">Gender</label>
+          <div class="mt-1 space-x-4">
+            <label class="inline-flex items-center">
+              <input
+                type="radio"
+                class="form-radio"
+                name="gender"
+                id="male"
+                value="Male"
+              />
+              <span class="ml-2">Male</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input
+                type="radio"
+                class="form-radio"
+                name="gender"
+                id="female"
+                value="Female"
+              />
+              <span class="ml-2">Female</span>
+            </label>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600"
+            >Profession</label
+          >
+          <input
+            type="text"
+            class="mt-1 p-2 w-full border rounded-md"
+            id="profession"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600">Email</label>
+          <input
+            type="email"
+            class="mt-1 p-2 w-full border rounded-md"
+            id="email"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-600"
+            >Mobile Number</label
+          >
+          <input
+            type="tel"
+            class="mt-1 p-2 w-full border rounded-md"
+            id="mobileNumber"
+            required
+          />
+        </div>
+        <div class="mt-6 flex justify-between">
+          <button
+            type="submit"
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+            class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 focus:outline-none focus:bg-gray-500"
+            id="resetBtn"
+          >
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div
+      class="hidden fixed inset-0 bg-black bg-opacity-50 justify-center items-center flex"
+      id="modal"
+    >
+      <div class="bg-white p-8 rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4">Survey Form Submission</h2>
+        <div id="modalContent"></div>
+        <div class="flex flex-row justify-between">
+          <button
+            class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+            id="closeModalBtn"
+          >
+            Confirm
+          </button>
+          <button
+            class="mt-4 bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 focus:outline-none focus:bg-gray-500"
+            id="editModalBtn"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
